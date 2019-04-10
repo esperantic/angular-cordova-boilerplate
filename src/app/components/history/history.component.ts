@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
-import { HistoryDataSource } from './history-datasource';
+import {MatPaginator, MatSort} from '@angular/material';
+import {HistoryDataSource} from './history-datasource';
 
 @Component({
   selector: 'app-history',
