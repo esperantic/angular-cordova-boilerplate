@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-cordova-boilerplate",
+            "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -106,7 +106,7 @@
               "**/node_modules/**"
             ]
           }
-        }
+        },
       }
     },
     "angular-cordova-boilerplate-e2e": {
