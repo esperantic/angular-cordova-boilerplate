@@ -19,8 +19,11 @@ import {
   MatCardModule,
   MatMenuModule
 } from '@angular/material';
-import {HistoryComponent} from './components/history/history.component';
+
 import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {HistoryComponent} from './components/history/history.component';
+
+import { DeeplinkService } from './services/deeplink/deeplink.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
     MatCardModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    DeeplinkService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
