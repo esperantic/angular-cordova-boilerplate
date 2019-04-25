@@ -9,9 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "cordova": ".\"/node_modules/.bin/cordova\"",
     "platform:add:android": "cordova platform add android",
     "platform:add:ios": "cordova platform add ios",
-    "emulate:android": "ng build --prod && cordova run android"
+    "emulate:ios:emulator": "ng build --prod && cordova emulate ios",
+    "emulate:android:emulator": "ng build --prod && cordova emulate android",
+    "emulate:android:device": "ng build --prod && cordova run android"
   },
   "private": true,
   "dependencies": {
@@ -26,10 +29,12 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "cordova": "^9.0.0",
-    "cordova-android": "^6.3.0",
+    "cordova-android": "^6.4.0",
+    "cordova-ios": "^4.5.5",
     "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
+    "ionic-plugin-deeplinks": "^1.0.19",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -57,10 +62,16 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-deeplinks": {
+        "URL_SCHEME": "myapp",
+        "DEEPLINK_SCHEME": "https",
+        "DEEPLINK_HOST": "example.com"
+      }
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
